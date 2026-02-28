@@ -11,6 +11,7 @@
 <body>
   <div id="top"></div>
 
+  <!-- Global navigation -->
   <header>
     <div class="logo">
       <a href="index.html">
@@ -26,17 +27,19 @@
         <li><a href="lodging.html">Lodging</a></li>
         <li><a href="transportation.html">Transportation</a></li>
         <li><a href="plan.html">Plan Your Trip</a></li>
-        <li><a class="active btn-primary" href="book.html">Book Now</a></li>
+        <li><a class="active" href="book.html">Book Now</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="page">
+    <!-- Page header -->
     <section class="page-hero">
       <h1>Book Now</h1>
       <p>Send your request and a Taniti representative will follow up with details and availability.</p>
     </section>
 
+    <!-- Booking form -->
     <section class="section" aria-labelledby="book-form-title">
       <div class="section-header">
         <h2 id="book-form-title">Booking Request Form</h2>
@@ -44,7 +47,6 @@
       </div>
 
       <div class="grid-2">
-        <!-- Form -->
         <div class="form-card">
           <form id="booking-form" novalidate>
             <div class="form-row">
@@ -110,7 +112,12 @@
 
             <div class="form-row">
               <label for="details">Details</label>
-              <textarea id="details" name="details" rows="5" placeholder="Tell us what you’d like to book and any preferences."></textarea>
+              <textarea
+                id="details"
+                name="details"
+                rows="5"
+                placeholder="Tell us what you’d like to book and any preferences."
+              ></textarea>
               <p class="field-hint">If you have accessibility needs, please include them here.</p>
             </div>
 
@@ -123,27 +130,25 @@
           </form>
         </div>
 
-        <!-- Helpful info -->
-        <section class="section">
-          <div class="form-card">
-            <h2>Before You Submit</h2>
-        
-            <ul class="bullets dark-bullets">
-              <li>Most requests receive a response within 1-2 business days.</li>
-              <li>For best availability, submit requests early during peak season.</li>
-              <li>If you have accessibility needs, include them in the details field.</li>
-            </ul>
-        
-            <p class="helper-links">
-              Want ideas first? Browse <a href="attractions.html">Attractions</a> or compare
-              <a href="lodging.html">Lodging</a>.
-            </p>
-        
-            <p class="prototype-note">
-              This site is a prototype for Taniti tourism planning. Submissions do not create a real reservation.
-            </p>
-          </div>
-        </section>
+        <!-- Booking notes -->
+        <div class="form-card">
+          <h2>Before You Submit</h2>
+
+          <ul class="bullets dark-bullets">
+            <li>Most requests receive a response within 1-2 business days.</li>
+            <li>For best availability, submit requests early during peak season.</li>
+            <li>If you have accessibility needs, include them in the details field.</li>
+          </ul>
+
+          <p class="helper-links">
+            Want ideas first? Browse <a href="attractions.html">Attractions</a> or compare
+            <a href="lodging.html">Lodging</a>.
+          </p>
+
+          <p class="prototype-note">
+            This site is a prototype for Taniti tourism planning. Submissions do not create a real reservation.
+          </p>
+        </div>
       </div>
     </section>
   </main>

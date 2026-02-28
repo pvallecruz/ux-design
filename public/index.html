@@ -1,78 +1,82 @@
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <title>Taniti Tourism</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="icon" type="image/png" href="favicon.png">
-      <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Taniti Tourism</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
 
-      <!-- Sticky Header Navigation -->
-      <header>
-        <div class="logo">
-          <img src="favicon.png" alt="Taniti logo">
-          <span>Taniti Island</span>
-        </div>
+<body>
+  <div id="top"></div>
 
-          <nav>
-              <ul>
-                  <li><a class="active" href="index.html">Home</a></li>
-                  <li><a href="attractions.html">Attractions</a></li>
-                  <li><a href="lodging.html">Lodging</a></li>
-                  <li><a href="transportation.html">Transportation</a></li>
-                  <li><a href="plan.html">Plan Your Trip</a></li>
-                  <li><a class="btn-primary" href="book.html">Book Now</a></li>
-              </ul>
-          </nav>
-      </header>
+  <!-- Global navigation -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="favicon.png" alt="Taniti logo" />
+        <span>Taniti Island</span>
+      </a>
+    </div>
 
-      <!-- Hero Section -->
-      <section class="hero">
-          <div class="hero-content">
-              <h1>Discover the Island of Taniti</h1>
-              <p>Experience beaches, rainforest adventures, and island culture.</p>
-              <a href="attractions.html" class="btn-primary large">Explore Attractions</a>
-          </div>
-      </section>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="attractions.html">Attractions</a></li>
+        <li><a href="lodging.html">Lodging</a></li>
+        <li><a href="transportation.html">Transportation</a></li>
+        <li><a href="plan.html">Plan Your Trip</a></li>
+        <li><a class="btn-primary" href="book.html">Book Now</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      <!-- Highlights Section -->
-      <section class="highlights">
-          <h2>Island Highlights</h2>
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Discover the Island of Taniti</h1>
+        <p>Experience beaches, rainforest adventures, and island culture.</p>
+        <a class="btn-primary large" href="attractions.html">Explore Attractions</a>
+      </div>
+    </section>
 
-          <div class="card-container">
-              <div class="card">
-                  <h3>Coral Bay Beach</h3>
-                  <p>Relax along crystal-clear waters and soft white sands.</p>
-                  <a href="attractions.html#coral-bay" class="btn-secondary">Learn More</a>
-              </div>
+    <!-- Highlights -->
+    <section class="highlights" aria-labelledby="highlights-title">
+      <h2 id="highlights-title">Island Highlights</h2>
 
-              <div class="card">
-                  <h3>Rainforest Trails</h3>
-                  <p>Explore lush jungle paths and breathtaking waterfalls.</p>
-                  <a href="attractions.html#rainforest-trails" class="btn-secondary">Learn More</a>
-              </div>
+      <div class="card-container">
+        <article class="card">
+          <h3>Coral Bay Beach</h3>
+          <p>Relax along crystal-clear waters and soft white sands.</p>
+          <a class="btn-secondary" href="attractions.html#coral-bay">Learn More</a>
+        </article>
 
-              <div class="card">
-                  <h3>Volcano Tours</h3>
-                  <p>Discover Taniti's natural beauty with guided volcano hikes.</p>
-                  <a href="attractions.html#volcano-tours" class="btn-secondary">Learn More</a>
-              </div>
-          </div>
-      </section>
+        <article class="card">
+          <h3>Rainforest Trails</h3>
+          <p>Explore lush jungle paths and breathtaking waterfalls.</p>
+          <a class="btn-secondary" href="attractions.html#rainforest-trails">Learn More</a>
+        </article>
 
-      <!-- Call to Action Section -->
-      <section class="cta">
-          <h2>Ready to Visit Taniti?</h2>
-          <p>Book your island experience today.</p>
-          <a href="book.html" class="btn-primary large">Book Your Trip</a>
-      </section>
+        <article class="card">
+          <h3>Volcano Tours</h3>
+          <p>Discover Taniti's natural beauty with guided volcano hikes.</p>
+          <a class="btn-secondary" href="attractions.html#volcano-tours">Learn More</a>
+        </article>
+      </div>
+    </section>
 
-      <!-- Footer -->
-      <footer>
-          <p>&copy; 2026 Taniti Tourism Board</p>
-      </footer>
+    <!-- Primary call-to-action -->
+    <section class="cta">
+      <h2>Ready to Visit Taniti?</h2>
+      <p>Book your island experience today.</p>
+      <a class="btn-primary large" href="book.html">Book Your Trip</a>
+    </section>
+  </main>
 
-  </body>
-  </html>
+  <footer>
+    <p>&copy; 2026 Taniti Tourism Board</p>
+  </footer>
+</body>
+</html>

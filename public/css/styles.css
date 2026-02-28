@@ -1,5 +1,5 @@
 /* =========================
-   Base reset + theme tokens
+   Reset + theme tokens
    ========================= */
 
 * {
@@ -57,7 +57,6 @@ header {
     display: flex;
     align-items: center;
     gap: 0.6rem;
-
     font-size: 1.6rem;
     font-weight: 700;
     color: var(--deep-ocean);
@@ -93,7 +92,7 @@ nav a {
     padding: 0.5rem 0.9rem;
     border-radius: 25px;
 
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
@@ -106,11 +105,30 @@ nav a.active {
     color: var(--white);
 }
 
-/* =========================
-   Page sections
-   ========================= */
+/* Nav CTA (Book Now) */
+nav ul li:last-child a {
+    background: var(--sunset);
+    color: var(--white);
+    font-weight: 700;
+}
 
-/* Home hero */
+nav ul li:last-child a:hover {
+    background: #e86445;
+}
+
+/* Keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid rgba(0, 140, 140, 0.55);
+    outline-offset: 3px;
+}
+
+/* =========================
+   Home hero
+   ========================= */
 
 .hero {
     height: 90vh;
@@ -135,144 +153,8 @@ nav a.active {
     margin-bottom: 2rem;
 }
 
-/* Highlights (home) */
-
-.highlights {
-    padding: 4rem 2rem;
-    text-align: center;
-    background: transparent;
-}
-
-.highlights h2 {
-    color: var(--white);
-    margin-bottom: 2rem;
-}
-
-/* CTA band */
-
-.cta {
-    padding: 4rem 2rem;
-    text-align: center;
-    color: var(--white);
-}
-
-.cta h2 {
-    margin-bottom: 1rem;
-}
-
-.cta p {
-    margin-bottom: 1.5rem;
-}
-
 /* =========================
-   Cards
-   ========================= */
-
-.card-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-
-.card {
-    width: 300px;
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: 12px;
-    overflow: hidden;
-    padding: 2rem;
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-}
-
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease;
-    margin-bottom: 1rem;
-}
-
-.card:hover img {
-    transform: scale(1.05);
-}
-
-.card-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    text-align: center;
-}
-
-.card h3 {
-    color: var(--deep-ocean);
-    margin-bottom: 1rem;
-}
-
-.card p {
-    color: var(--dark);
-}
-
-/* =========================
-   Buttons + links
-   ========================= */
-
-.btn-primary {
-    background: var(--sunset);
-    color: var(--white);
-
-    padding: 0.7rem 1.6rem;
-    border-radius: 30px;
-
-    text-decoration: none;
-    font-weight: 600;
-
-    transition: background 0.3s ease;
-    margin-top: 1.5rem;
-}
-
-.btn-primary:hover {
-    background: #e86445;
-}
-
-.btn-secondary {
-    display: inline-block;
-    margin-top: 0.75rem;
-    text-decoration: none;
-    font-weight: 700;
-    color: var(--deep-ocean);
-}
-
-.btn-secondary:hover {
-    text-decoration: underline;
-}
-
-.card a.btn-primary,
-.section-copy a.btn-primary {
-    display: inline-block;
-}
-
-/* =========================
-   Footer
-   ========================= */
-
-footer {
-    text-align: center;
-    color: var(--white);
-
-    padding: 1.5rem;
-    font-size: 0.9rem;
-
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(8px);
-}
-
-/* =========================
-   Page helpers
+   Shared page structure
    ========================= */
 
 .page {
@@ -336,7 +218,141 @@ footer {
     text-decoration: underline;
 }
 
-/* 2-column layout */
+/* =========================
+   Highlights + CTA bands
+   ========================= */
+
+.highlights {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: transparent;
+}
+
+.highlights h2 {
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+
+.cta {
+    padding: 4rem 2rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.cta h2 {
+    margin-bottom: 1rem;
+}
+
+.cta p {
+    margin-bottom: 1.5rem;
+}
+
+/* =========================
+   Cards
+   ========================= */
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* Base card */
+.card {
+    width: 300px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* Cards without images (home + overview cards) */
+.card:not(:has(img)) {
+    padding: 2rem;
+}
+
+/* Card images */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* Card content */
+.card-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: center;
+}
+
+.card h3 {
+    color: var(--deep-ocean);
+    margin-bottom: 0.25rem;
+}
+
+.card p {
+    color: var(--dark);
+}
+
+/* =========================
+   Buttons + links
+   ========================= */
+
+.btn-primary {
+    background: var(--sunset);
+    color: var(--white);
+
+    padding: 0.7rem 1.6rem;
+    border-radius: 30px;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: background 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background: #e86445;
+}
+
+.btn-secondary {
+    display: inline-block;
+    margin-top: 0.75rem;
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--deep-ocean);
+}
+
+.btn-secondary:hover {
+    text-decoration: underline;
+}
+
+/* Spacing helpers for common patterns */
+.section-copy p + .btn-primary {
+    margin-top: 1rem;
+}
+
+.card-content .btn-primary {
+    margin-top: 0.25rem;
+}
+
+/* =========================
+   Two-column layout blocks
+   ========================= */
 
 .grid-2 {
     display: grid;
@@ -346,8 +362,7 @@ footer {
     margin-bottom: 2rem;
 }
 
-/* Media block */
-
+/* Media */
 .media {
     border-radius: 12px;
     overflow: hidden;
@@ -360,8 +375,7 @@ footer {
     display: block;
 }
 
-/* Text block */
-
+/* Text */
 .section-copy {
     color: var(--white);
 }
@@ -387,7 +401,7 @@ footer {
     width: 100%;
     margin: 1.5rem 0;
     border-collapse: collapse;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.92);
     border-radius: 12px;
     overflow: hidden;
     font-size: 0.95rem;
@@ -415,6 +429,12 @@ footer {
 .schedule-table tbody tr:hover {
     background-color: rgba(0, 140, 140, 0.1);
     transition: background 0.2s ease;
+}
+
+.schedule-note {
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--white);
 }
 
 /* =========================
@@ -472,7 +492,7 @@ footer {
     display: flex;
     gap: 0.8rem;
     align-items: center;
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
 }
 
 .btn-ghost {
@@ -537,12 +557,6 @@ footer {
     color: rgba(0, 0, 0, 0.7);
     font-size: 0.95rem;
     font-style: italic;
-}
-
-.schedule-note {
-    margin-top: 0.75rem;
-    font-size: 0.95rem;
-    color: var(--white);
 }
 
 /* =========================
