@@ -154,6 +154,7 @@ nav a.active {
     background: rgba(255, 255, 255, 0.85);
     border-radius: 12px;
     overflow: hidden;
+    padding: 2rem;
 
     transition: transform 0.3s ease;
 }
@@ -169,6 +170,7 @@ nav a.active {
     object-fit: cover;
     display: block;
     transition: transform 0.4s ease;
+    margin-bottom: 1rem;;
 }
 
 .card:hover img {
@@ -177,7 +179,10 @@ nav a.active {
 
 /* Card content wrapper (use this when cards include images) */
 .card-content {
-    padding: 1.5rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem; /* space between title, text, link */
+    text-align: center;
 }
 
 .card h3 {
@@ -241,9 +246,9 @@ nav a.active {
 /* Secondary link style (used on homepage cards and elsewhere) */
 .btn-secondary {
     display: inline-block;
-    margin-top: 1rem;
+    margin-top: 0.75rem; /* extra breathing room */
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--deep-ocean);
 }
 
@@ -278,8 +283,13 @@ footer {
 
 .page-hero {
     text-align: center;
-    padding: 3rem 2rem 1rem;
+    padding: 4rem 2rem 2rem;
     color: var(--white);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 .page-hero h1 {
