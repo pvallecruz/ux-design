@@ -1,0 +1,236 @@
+/* =========================
+   Base reset + theme tokens
+   ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+:root {
+    --ocean: #008C8C;
+    --deep-ocean: #006D6D;
+    --sand: #F4E3C1;
+    --palm: #2E7D32;
+    --sunset: #FF7E5F;
+    --white: #ffffff;
+    --dark: #333333;
+}
+
+/* Page background (fixed island image + overlay for readability) */
+body {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("../images/taniti-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: var(--dark);
+}
+
+/* =========================
+   Header + navigation
+   ========================= */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: var(--sand);
+    padding: 1rem 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Brand */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--deep-ocean);
+}
+
+.logo img {
+    width: 32px;
+    height: 32px;
+}
+
+/* Nav links */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--deep-ocean);
+    font-weight: 500;
+
+    padding: 0.5rem 0.9rem;
+    border-radius: 25px;
+
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--ocean);
+    color: var(--white);
+}
+
+nav a.active {
+    background-color: var(--sunset);
+    color: var(--white);
+}
+
+/* =========================
+   Sections
+   ========================= */
+
+/* Hero */
+.hero {
+    height: 90vh;
+    padding: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: var(--white);
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+/* Highlights */
+.highlights {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: transparent;
+}
+
+.highlights h2 {
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.card {
+    width: 300px;
+    padding: 2rem;
+
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    color: var(--deep-ocean);
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: var(--dark);
+}
+
+/* CTA */
+.cta {
+    padding: 4rem 2rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.cta h2 {
+    margin-bottom: 1rem;
+}
+
+.cta p {
+    margin-bottom: 1.5rem;
+}
+
+/* =========================
+   Buttons
+   ========================= */
+.btn-primary {
+    background: var(--sunset);
+    color: var(--white);
+
+    padding: 0.7rem 1.6rem;
+    border-radius: 30px;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #e86445;
+}
+
+/* =========================
+   Footer
+   ========================= */
+footer {
+    text-align: center;
+    color: var(--white);
+
+    padding: 1.5rem;
+    font-size: 0.9rem;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+}
+
+/* =========================
+   Mobile layout
+   ========================= */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
