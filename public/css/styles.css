@@ -1,6 +1,7 @@
 /* =========================
    Base reset + theme tokens
    ========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +19,10 @@
     --dark: #333333;
 }
 
-/* Page background (fixed island image + overlay for readability) */
+/* =========================
+   Global layout + background
+   ========================= */
+
 body {
     background:
         linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
@@ -27,13 +31,13 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
     color: var(--dark);
 }
 
 /* =========================
    Header + navigation
    ========================= */
+
 header {
     position: sticky;
     top: 0;
@@ -48,13 +52,14 @@ header {
 }
 
 /* Brand */
+
 .logo {
     display: flex;
     align-items: center;
     gap: 0.6rem;
 
     font-size: 1.6rem;
-    font-weight: bold;
+    font-weight: 700;
     color: var(--deep-ocean);
 }
 
@@ -63,7 +68,6 @@ header {
     height: 32px;
 }
 
-/* Keep logo clean when it’s a link */
 .logo a {
     display: flex;
     align-items: center;
@@ -72,7 +76,8 @@ header {
     color: inherit;
 }
 
-/* Nav links */
+/* Nav */
+
 nav ul {
     list-style: none;
     display: flex;
@@ -102,10 +107,11 @@ nav a.active {
 }
 
 /* =========================
-   Sections
+   Page sections
    ========================= */
 
-/* Hero */
+/* Home hero */
+
 .hero {
     height: 90vh;
     padding: 2rem;
@@ -129,7 +135,8 @@ nav a.active {
     margin-bottom: 2rem;
 }
 
-/* Highlights */
+/* Highlights (home) */
+
 .highlights {
     padding: 4rem 2rem;
     text-align: center;
@@ -141,72 +148,8 @@ nav a.active {
     margin-bottom: 2rem;
 }
 
-.card-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
+/* CTA band */
 
-/* Card base */
-.card {
-    width: 300px;
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: 12px;
-    overflow: hidden;
-    padding: 2rem;
-
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-}
-
-/* Card image */
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease;
-    margin-bottom: 1rem;;
-}
-
-.card:hover img {
-    transform: scale(1.05);
-}
-
-/* Card content wrapper (use this when cards include images) */
-.card-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem; /* space between title, text, link */
-    text-align: center;
-}
-
-.card h3 {
-    color: var(--deep-ocean);
-    margin-bottom: 1rem;
-}
-
-.card p {
-    color: var(--dark);
-}
-
-/* Space before primary button (used in overview cards) */
-.card .btn-primary {
-    display: inline-block;
-    margin-top: 1.5rem;
-}
-
-/* Space before secondary links (used in beach cards) */
-.card-content .btn-secondary {
-    display: inline-block;
-    margin-top: 1.2rem;
-}
-
-/* CTA */
 .cta {
     padding: 4rem 2rem;
     text-align: center;
@@ -222,8 +165,62 @@ nav a.active {
 }
 
 /* =========================
-   Buttons
+   Cards
    ========================= */
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.card {
+    width: 300px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+    margin-bottom: 1rem;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: center;
+}
+
+.card h3 {
+    color: var(--deep-ocean);
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: var(--dark);
+}
+
+/* =========================
+   Buttons + links
+   ========================= */
+
 .btn-primary {
     background: var(--sunset);
     color: var(--white);
@@ -235,7 +232,6 @@ nav a.active {
     font-weight: 600;
 
     transition: background 0.3s ease;
-
     margin-top: 1.5rem;
 }
 
@@ -243,10 +239,9 @@ nav a.active {
     background: #e86445;
 }
 
-/* Secondary link style (used on homepage cards and elsewhere) */
 .btn-secondary {
     display: inline-block;
-    margin-top: 0.75rem; /* extra breathing room */
+    margin-top: 0.75rem;
     text-decoration: none;
     font-weight: 700;
     color: var(--deep-ocean);
@@ -256,7 +251,6 @@ nav a.active {
     text-decoration: underline;
 }
 
-/* Make button links behave consistently */
 .card a.btn-primary,
 .section-copy a.btn-primary {
     display: inline-block;
@@ -265,6 +259,7 @@ nav a.active {
 /* =========================
    Footer
    ========================= */
+
 footer {
     text-align: center;
     color: var(--white);
@@ -276,7 +271,10 @@ footer {
     backdrop-filter: blur(8px);
 }
 
-/* ===== Page helpers ===== */
+/* =========================
+   Page helpers
+   ========================= */
+
 .page {
     padding: 2rem 0 3rem;
 }
@@ -304,7 +302,6 @@ footer {
     opacity: 0.95;
 }
 
-/* Sections */
 .section {
     padding: 3rem 2rem;
 }
@@ -314,12 +311,12 @@ footer {
     margin-bottom: 1.5rem;
 }
 
-/* Prevent sticky header covering anchor targets */
 .anchor-offset {
     scroll-margin-top: 110px;
 }
 
 /* Section header row */
+
 .section-header {
     display: flex;
     justify-content: space-between;
@@ -339,7 +336,8 @@ footer {
     text-decoration: underline;
 }
 
-/* 2-column layout for media + text */
+/* 2-column layout */
+
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -348,18 +346,7 @@ footer {
     margin-bottom: 2rem;
 }
 
-/* Placeholder blocks for images */
-.media-placeholder {
-    min-height: 260px;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.18);
-    backdrop-filter: blur(8px);
-    display: grid;
-    place-items: center;
-    color: var(--white);
-    text-align: center;
-    padding: 1rem;
-}
+/* Media block */
 
 .media {
     border-radius: 12px;
@@ -372,6 +359,8 @@ footer {
     object-fit: cover;
     display: block;
 }
+
+/* Text block */
 
 .section-copy {
     color: var(--white);
@@ -391,7 +380,7 @@ footer {
 }
 
 /* =========================
-   Schedule Table
+   Schedule table
    ========================= */
 
 .schedule-table {
@@ -415,6 +404,10 @@ footer {
     color: var(--white);
 }
 
+.schedule-table tbody {
+    color: var(--dark);
+}
+
 .schedule-table tbody tr:nth-child(even) {
     background-color: rgba(0, 0, 0, 0.05);
 }
@@ -424,13 +417,132 @@ footer {
     transition: background 0.2s ease;
 }
 
-.schedule-table tbody {
+/* =========================
+   Forms (Book Now)
+   ========================= */
+
+.form-card {
+    background: rgba(255, 255, 255, 0.88);
+    border-radius: 12px;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.1rem;
+}
+
+.form-row label {
+    font-weight: 700;
+    color: var(--deep-ocean);
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+    padding: 0.75rem 0.9rem;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    outline: none;
+    font-size: 1rem;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+    border-color: var(--ocean);
+    box-shadow: 0 0 0 3px rgba(0, 140, 140, 0.18);
+}
+
+.field-hint {
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-actions {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.btn-ghost {
+    background: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.75);
+    padding: 0.65rem 1.2rem;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-ghost:hover {
+    border-color: var(--deep-ocean);
+    color: var(--deep-ocean);
+}
+
+.form-message {
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+.form-message.success {
+    color: #1f7a3a;
+}
+
+.form-message.error {
+    color: #b00020;
+}
+
+/* Book Now helper card */
+.form-card h2 {
+    color: var(--deep-ocean);
+    margin-bottom: 1rem;
+}
+
+.dark-bullets {
     color: var(--dark);
+    margin-top: 0.5rem;
+}
+
+.helper-links {
+    margin-top: 1rem;
+    color: var(--dark);
+    font-weight: 600;
+}
+
+.helper-links a {
+    color: var(--deep-ocean);
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.helper-links a:hover {
+    text-decoration: underline;
+}
+
+.prototype-note {
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.95rem;
+    font-style: italic;
 }
 
 /* =========================
-   Mobile layout
+   Responsive
    ========================= */
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -452,6 +564,10 @@ footer {
     }
 
     .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
         grid-template-columns: 1fr;
     }
 }

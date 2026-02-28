@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Book Now | Taniti Tourism</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <div id="top"></div>
+
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="favicon.png" alt="Taniti logo" />
+        <span>Taniti Island</span>
+      </a>
+    </div>
+
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="attractions.html">Attractions</a></li>
+        <li><a href="lodging.html">Lodging</a></li>
+        <li><a href="transportation.html">Transportation</a></li>
+        <li><a href="plan.html">Plan Your Trip</a></li>
+        <li><a class="active btn-primary" href="book.html">Book Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="page-hero">
+      <h1>Book Now</h1>
+      <p>Send your request and a Taniti representative will follow up with details and availability.</p>
+    </section>
+
+    <section class="section" aria-labelledby="book-form-title">
+      <div class="section-header">
+        <h2 id="book-form-title">Booking Request Form</h2>
+        <a class="back-to-top" href="#top">Back to top</a>
+      </div>
+
+      <div class="grid-2">
+        <!-- Form -->
+        <div class="form-card">
+          <form id="booking-form" novalidate>
+            <div class="form-row">
+              <label for="fullName">Full Name</label>
+              <input id="fullName" name="fullName" type="text" autocomplete="name" required />
+              <small class="field-hint">Required</small>
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+              <small class="field-hint">Required</small>
+            </div>
+
+            <div class="form-row">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(555) 123-4567" />
+              <small class="field-hint">Optional</small>
+            </div>
+
+            <div class="form-row">
+              <label for="category">What would you like to book?</label>
+              <select id="category" name="category" required>
+                <option value="" selected disabled>Select an option</option>
+                <option value="Lodging">Lodging</option>
+                <option value="Attractions">Attractions / Tours</option>
+                <option value="Transportation">Transportation</option>
+                <option value="Multiple">Multiple Items</option>
+              </select>
+              <small class="field-hint">Required</small>
+            </div>
+
+            <div class="form-row form-grid">
+              <div>
+                <label for="startDate">Start Date</label>
+                <input id="startDate" name="startDate" type="date" required />
+                <small class="field-hint">Required</small>
+              </div>
+              <div>
+                <label for="endDate">End Date</label>
+                <input id="endDate" name="endDate" type="date" required />
+                <small class="field-hint">Required</small>
+              </div>
+            </div>
+
+            <div class="form-row form-grid">
+              <div>
+                <label for="travelers">Number of Travelers</label>
+                <input id="travelers" name="travelers" type="number" min="1" max="20" value="2" required />
+                <small class="field-hint">Required</small>
+              </div>
+              <div>
+                <label for="budget">Budget (Optional)</label>
+                <select id="budget" name="budget">
+                  <option value="" selected>Not sure yet</option>
+                  <option value="Economy">Economy</option>
+                  <option value="Mid-range">Mid-range</option>
+                  <option value="Premium">Premium</option>
+                </select>
+                <small class="field-hint">Optional</small>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="notes">Details / Requests</label>
+              <textarea id="notes" name="notes" rows="5" placeholder="Tell us what you’re looking for (preferences, timing, accessibility needs, etc.)"></textarea>
+              <small class="field-hint">Optional</small>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">Submit Request</button>
+              <button type="reset" class="btn-ghost">Clear</button>
+            </div>
+
+            <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <!-- Helpful info -->
+        <section class="section">
+          <div class="form-card">
+            <h2>Before You Submit</h2>
+        
+            <ul class="bullets dark-bullets">
+              <li>Most requests receive a response within 1-2 business days.</li>
+              <li>For best availability, submit requests early during peak season.</li>
+              <li>If you have accessibility needs, include them in the details field.</li>
+            </ul>
+        
+            <p class="helper-links">
+              Want ideas first? Browse <a href="attractions.html">Attractions</a> or compare
+              <a href="lodging.html">Lodging</a>.
+            </p>
+        
+            <p class="prototype-note">
+              This site is a prototype for Taniti tourism planning. Submissions do not create a real reservation.
+            </p>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Taniti Tourism Board</p>
+  </footer>
+
+  <script src="js/book.js"></script>
+</body>
+</html>
