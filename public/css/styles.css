@@ -391,6 +391,44 @@ footer {
 }
 
 /* =========================
+   Schedule Table
+   ========================= */
+
+.schedule-table {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 0.95rem;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+.schedule-table thead {
+    background-color: var(--deep-ocean);
+    color: var(--white);
+}
+
+.schedule-table tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.schedule-table tbody tr:hover {
+    background-color: rgba(0, 140, 140, 0.1);
+    transition: background 0.2s ease;
+}
+
+.schedule-table tbody {
+    color: var(--dark);
+}
+
+/* =========================
    Mobile layout
    ========================= */
 @media (max-width: 768px) {
