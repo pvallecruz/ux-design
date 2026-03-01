@@ -184,6 +184,29 @@ textarea:focus-visible {
     opacity: 0.95;
 }
 
+/* =========================
+   Footer
+   ========================= */
+
+footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+    color: var(--white);
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(6px);
+    margin-top: 3rem;
+}
+
+footer a {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+footer a:hover {
+    opacity: 0.8;
+}
+
 .section {
     padding: 3rem 2rem;
 }
